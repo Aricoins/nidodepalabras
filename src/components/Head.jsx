@@ -26,17 +26,20 @@ transform: traslate ( 400px, 50px);
   }
   
  40% {
-
+  background:0;
+  border-radius: 50%;
     transform: translate(0, 0) scaleX(-1);
   }
   80% {
 background-color: red;
-transform: translate(0, 0)rotate(-30deg) scale(1.5);
+transform: translate(0, 0)rotate(-30deg) scale(4);
+opacity: 1;
 }
 
   100% {
-background-color: green;
+background-color: #f9f4f0;
 transform: translate(500px, -500px);
+opacity: 0;
 }
 `;
 
