@@ -1,16 +1,77 @@
-<svg id="bird-cells" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3671 510">
-  <g fill="none" fill-rule="evenodd">
+// AnimatedBird.jsx
+import React, { useEffect } from "react";
+import styled, { keyframes } from "styled-components";
+import birdSVG from "../assets/bird.svg";
+
+const BirdWrapper = styled.div`
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+`;
+
+const BirdImage = styled.img`
+  width: 80px;
+  height: auto;
+  will-change: transform;
+`;
+
+const Bird = styled.div`
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 2px;
+  left: 20px;
+  animation: ${props => props.flyAnimation} 8s steps(10) infinite,
+    ${props => props.returnAnimation} 3s 8s forwards;
+`;
+
+const AnimatedBird = () => {
+    const svgGroup = birdSVG.getElementById("bird-cells");
+  
+    function animateSVG() {
+        // Aplica la animación de rotación
+        svgGroup.animate(
+          [
+            // Primer fotograma (sin rotación)
+            { transform: "rotate(0deg)" },
+    
+            // Último fotograma (rotación completa)
+            { transform: "traslate(50px)" },
+          ],
+          {
+            // Configuración de la animación
+            duration: 5000, // Duración en milisegundos (5 segundos en este caso)
+            iterations: Infinity, // Repite la animación infinitamente
+            easing: "linear", // Tipo de easing
+          }
+        );
+      }
+    
+    
+    
+
+
+  return (
+    <BirdWrapper>
+      <Bird >
+      
+      <svg id="bird-cells" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3671 510">
+  <g fill="none" fillRule="evenodd">
     <g>
-      <path class="cell-container" stroke="none" d="M.5.5h359v509H.5z"/>
-      <path class="cell-container" stroke="none" d="M359.5.5h359v509h-359z"/>
-      <path class="cell-container" stroke="none" d="M718.5.5h359v509h-359z"/>
-      <path class="cell-container" stroke="none" d="M1077.5.5h370v509h-370z"/>
-      <path class="cell-container" stroke="none" d="M1448.5.5h370v509h-370z"/>
-      <path class="cell-container" stroke="none" d="M1818.5.5h370v509h-370z"/>
-      <path class="cell-container" stroke="none" d="M2189.5.5h370v509h-370z"/>
-      <path class="cell-container" stroke="none" d="M2559.5.5h370v509h-370z"/>
-      <path class="cell-container" stroke="none" d="M2930.5.5h370v509h-370z"/>
-      <path class="cell-container" stroke="none" d="M3300.5.5h370v509h-370z"/>
+      <path className="cell-container1" stroke="none" d="M.5.5h359v509H.5z"/>
+      <path className="cell-container2" stroke="none" d="M359.5.5h359v509h-359z"/>
+      <path className="cell-container3" stroke="none" d="M718.5.5h359v509h-359z"/>
+      <path className="cell-container4" stroke="none" d="M1077.5.5h370v509h-370z"/>
+      <path className="cell-container5" stroke="none" d="M1448.5.5h370v509h-370z"/>
+      <path className="cell-container6" stroke="none" d="M1818.5.5h370v509h-370z"/>
+      <path className="cell-container7" stroke="none" d="M2189.5.5h370v509h-370z"/>
+      <path className="cell-container8" stroke="none" d="M2559.5.5h370v509h-370z"/>
+      <path className="cell-container9" stroke="none" d="M2930.5.5h370v509h-370z"/>
+      <path className="cell-container10" stroke="none" d="M3300.5.5h370v509h-370z"/>
       <path fill="#000" d="M51 288.38c13.33-5.34 35.33-9.34 66-12 0 0 18.44-9.95 55-15 1.04-.15 7.5-8 36-13 16 0 21-3.88 30 5 3.53-13.53 19.13-16.58 29-15 6.9 1.1 11.3 5.93 12 8 4 12 21 5 30 12-23 6-23 7-32 11-16 14-31 31-47 31-16 4-32.83 5.33-50.5 4-1 4-3.5 6.66-7.5 8-6 2-1-9-4-12s-3 10-17 18c-1-14-5-10-5-18s4 13-17 18c-14 3.33-31.67 4-53 2 26-8.67 41.33-16.34 46-23-5 0-18-1-21-9-14-4.5-30.67-4.5-50 0z"/>
       <path fill="#000" d="M639 273c0 2.07-10 3-16 5-9 1-8 8-14 7s-5 8-19 14c2 11 21 9 36 19 29 30.62 18 19 37 63 14 28 18 30 27 57-1 1-11-1-14-7-1 5-5 1-4 7-5-1-8-8-12-11-4-1 1 7-2 8-4 0-5-8-9-8-4 1 1 6-2 7-33-30-43-21-43-36-8 10-10-2-19 3-4-5-6-10-2-17-1-5-7 5-11 3-1.33-6 1-12.67 7-20-6.67 6.67-14 10-22 10 1-10-1-6.5 5-16-6 7.5-13 8-19 6-4.43-2.1 4-8 2-11.5-8 0-22.76-.3-24-3.5-3.26-8.4 8-19 4-25-3.12-4.67-12 9-15-3 0-12-4.67-17-14-15-8.67-1.33-19.33-1.33-32 0-19 2-27-5-58-5 10-5 9-13 27-13-21-3-10-10-45-13 30-8 32 0 54 7 68-7 22-15 94-22 14-2 36-4 58 2 5-2 6-5 15-6 8 0 12.67 3.67 14 11 10.67.72 16 1.72 16 3z"/>
       <path fill="#000" d="M729 299.03c32-14 56-26 90-40 20-6 37-5 56-8 28 0 17-8 55-3 8-1 10.95-7.5 19-7 8.67 0 13.33 2.66 14 8l26 5-24 5c-2.67 5.33-8 8.33-16 9-12 12-11 18-29 21 22 13 23 17 64 38 13 11 13 15 17 31 4 15.98 14.06 25.74 21 35 26 46 23 59 45 80-11-1-23-8-28-13-4-1-3 5-3 8-6-2-8-15-16-13-3.46 0 4 5 0 13-13-5-14-7-16-13-3-4-7-11-3-12-2 8 0 12-6 12-5-10-7-3-11-12-8-14-17-12-17-29-4 0-7 4-10 9-3-4 0-9-1-12-2 .66-4.33 1.66-7 3-2-12.67-2-21.67 0-27-8 2-4 6-15 10-5-6-4-12-2-21-5 6-5-3-12 2-9-9-10-18-25-18-5-12-3-20-11-22-3.23.86-4 10-6 7s-2-10-5-12c-2-3-6 6-9 3 0-5-2-11-6-14-3-4-5 0-10 3-2-5-2-9-1-14-4-1-14 5-12-2 0-7-4-4-8-4-5 0 1-5-1-6-5-2-13 2-21 6-5-2 4-10 0-10-31-1-38 7-76 4z"/>
@@ -23,4 +84,11 @@
       <path fill="#000" d="M3595.2 274c0-2.56-5-4-13-7-4.25-3.13 0-8-10-10-17 0-11.03 8.98-21 12-10-1-9-2-21 1-4.15 1.04-3.9-10.8-6-13-2.97-3.06-5-3-10-8-3-11 6-24 3-45-1.34-9.32-4.68-21.56-9-33-2.45-13.1-2-10-13-23-21-28-37-37-47-67-4.96-4.56-.68 12.44-5 11-7.68-2.56-15.4-19-19-19-2.9 0 7.5 17.9 4 23-3 4.4-17-7.67-17-5 0 3.33 8 16 15 19-4 4-9.5-4.6-11-1 7 9 1 11 6 24 5.77 12.05 11 8 16 18-3.62 4.17-24.5-6.8-26-3-1.02 2.53 9.7 2.7 17 10 6 6 1.8 13.48 6 16 5 3 2 6 8 13s10-2 8 8c-.94 4.66-4 4.34-4 9 0 5.34 8-1 6 5 0 2.57-4 4-6 8 0 .72 7.58-1.47 8 1 1.08 6.53-7.23 11.8-4 17 3.27 5.3 12 4 17 3-5 4-13 3.95-13 9 0 9.45 10 13 4 18 2 5-5 9-4 13s5.17 8.47 10 10c3.24 1.03 9 2 6 3-6 2-7-1-12 3-4.25 0-2-6-10-4-24 4-60 20-73 34-2 3 12-3 21-4-8 3-20 7-5 6 11 1 28 0 57-5 21.46-.66 17 7 39 2 11 3 28 6 43-5 14-2 15.58-9.85 33-23 6-2 11-11 14-17 7.8-3.53 12-1 18-4z"/>
     </g>
   </g>
-</svg>
+</svg> 
+        <BirdImage src={animateSVG()} alt="Bird" />
+      </Bird>
+    </BirdWrapper>
+  );
+};
+
+export default AnimatedBird;

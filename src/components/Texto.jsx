@@ -53,7 +53,7 @@ return(
 <>
 
 <Sti><h1>La voz de lxs poetas</h1></Sti>
-<Sti4> www.nidodepalabras.com </Sti4>
+<Sti4> www.nidodepalabras.online </Sti4>
 <div className="lista">
     <Sti3>
     <Sti2>Voces</Sti2> 

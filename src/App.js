@@ -12,7 +12,7 @@ function App() {
     <>
     <div className='App'>
       <Head/>
-     <Texto palabra="acá puede ir un dato "/>
+    <Texto palabra=""/>
     <Noticias />
     <Estados/>
   
