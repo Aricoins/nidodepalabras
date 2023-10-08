@@ -10,38 +10,43 @@ const Imagen = styled.img`
 
 const flyAnimation = keyframes`
   0% {
-    transform: translate(-1000px, 0) rotate(2deg) ;
+    transform: translate(-1000px, 200px) rotate(2deg) ;
   
   }
 
   2%{
 
-transform: traslate ( 400px, 50px);
+transform: traslate ( 400px, 200px);
 
 
   }
   20% {
-    transform: translate(20px, 0px) rotate(-10deg);
+    transform: translate(20px, 220px) rotate(-10deg) scale(2) ;
 
   }
   
  40% {
-  transform: translate(20px, 0px) rotate(-10deg);
+  transform: translate(20px, -100px)scale(0.5);
   }
- 41% {
+   50% {
   background:0;
   border-radius: 50%;
-    transform: translate(-800px, 0px)rotate(30deg) scaleX(-1);
+    transform: translate(-800px, -50px)rotate(30deg) scaleX(-1);
+  }
+ 51% {
+  background:0;
+  border-radius: 50%;
+    transform: translate(-500px, 0px)rotate(30deg) scaleX(-1);
   }
   80% {
-transform: translate(0, 0)rotate(-30deg) scale(4);
+transform: translate(-200, 200)rotate(-30deg) scale(2);
 opacity: 1;
 }
 
   81% {
 background-color:""; }
 100%{
-transform: translate(500px, -500px);
+transform: translate(500px, -200px);
 opacity:1;
 }
 `;
