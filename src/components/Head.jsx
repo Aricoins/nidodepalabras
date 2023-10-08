@@ -14,32 +14,35 @@ const flyAnimation = keyframes`
   
   }
 
-  10%{
+  2%{
 
 transform: traslate ( 400px, 50px);
 
 
   }
-  35% {
-    transform: translate(20px, 0px) rotate(30deg);
+  20% {
+    transform: translate(20px, 0px) rotate(-10deg);
 
   }
   
  40% {
+  transform: translate(20px, 0px) rotate(-10deg);
+  }
+ 41% {
   background:0;
   border-radius: 50%;
-    transform: translate(0, 0) scaleX(-1);
+    transform: translate(-800px, 0px)rotate(30deg) scaleX(-1);
   }
   80% {
-background-color: red;
 transform: translate(0, 0)rotate(-30deg) scale(4);
 opacity: 1;
 }
 
-  100% {
-background-color: #f9f4f0;
+  81% {
+background-color:""; }
+100%{
 transform: translate(500px, -500px);
-opacity: 0;
+opacity:1;
 }
 `;
 
