@@ -1,53 +1,48 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import url from "../assets/giphy.gif";
+import url from "../assets/img2.png";
 import Icon from "./Icon";
 import styles from "./Head.css";
 
-
 const Imagen = styled.img`
-  width: 90vw; /* Ocupa el ancho completo de la pantalla */
-  height: 100vh; /* Ocupa la altura completa de la pantalla */
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
+  height: 90vh; /* Ocupa la altura completa de la pantalla */
   object-fit: cover; /* Ajusta el tamaño manteniendo la relación de aspecto */
-  background-color: #fe9a17;
-  margin-left: 50px;
-  
+  background: rgb(34,193,195);
+background: linear-gradient(40deg, #e9eeee 40%, #f8c703 100%);
+left: 0;
+ 
 `;
 
 const flyAnimation = keyframes`
   0% {
-    transform: translate(-1000px, -100px) rotate(2deg) scale(0.1) ;
+    transform: translate(-1000px, -80px) rotate(2deg) scale(0.1) ;
   opacity: 1
   }
- 
-  40% {
-    transform: translate(-500px, 100px) rotate(-10deg) scale(3) ;
-    opacity: 1;
-    background-color: rgba(255, 0, 0, 0); /* Establece el fondo inicialmente transparente */
-  }
-
-65%{
-transform: translate(-500px, 100px)scale(3);
+  65%{
+transform: translate(-300px, 0px)scale(3);
 opacity:1;
-background-color: rgba(255, 0, 0, 0);  
+background-color: rgba(255, 0, 0, 0);}
 
-}
-76%{
-transform: translate(-500px, 50px)scale(2);
+  75%{
+transform: translate(-300px,50px)scale(4);
 opacity:1;
-background-color: #1ef302;  
-}
+background-color: rgba(255, 0, 0, 0);}
 
-79%{
-transform: translate(-500px, 50px)scale(2);
+84%{
+transform: translate(-300px, 50px)scale(4);
 opacity:1;
-background-color: #1ef302; 
+background-color: rgba(255, 0, 0, 0);}
 
-border-radius: 100%;
-
+86%{
+transform: translate(-300px, 50px)scale(4);
+opacity:1;
+background-color: #f7fbf673;  
+border-radius: 50%
 }
-81%{
-transform: translate(-500px, 50px)scale(2);
+
+90%{
+transform: translate(-300px, 50px)scale(4);
 opacity:1;
 background-color: rgba(255, 0, 0, 0);
 
@@ -56,7 +51,7 @@ border-radius: 100%;
 }
 
 100%{
-transform: translate(500px, -400px)scale(3);
+transform: translate(900px, -200px)scale(9);
 opacity:1;
 }` 
 
@@ -85,7 +80,8 @@ const flyAnimationMobile = keyframes`
 const Bird = styled.div`
   --screen-width: 100vw;
   --screen-height: 100vh;
-  position: absolute;
+  position:absolute;
+  top: 20px;
   right: 10%;
   animation: ${flyAnimation} 15s infinite;
 
@@ -158,14 +154,11 @@ const Container = styled.div`
 export default function Head() {
   return (
     <Container>
+    <Imagen src={url} />
       <Bird>
      <Icon className={styles.tamanio}></Icon>
      </Bird>
- <Imagen src={url} /> 
-       <Titulo>Nido de Palabras</Titulo>
-       <Subtitulo>nidodepalabras.online</Subtitulo>
-           
-    
-    </Container>
+     
+     </Container>
   );
 }
