@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 
+/*
 const Sti = styled.article`
     display: flex;
     flex-direction: row;
@@ -45,7 +46,7 @@ color: #86e989;
 const Sti4 = styled.h3`
     font-size: 30px;
     text-align: center;
-`
+`*/
 const Parrafo = styled.p`
     
 font-size: 40px;
