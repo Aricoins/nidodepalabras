@@ -46,22 +46,32 @@ const Sti4 = styled.h3`
     font-size: 30px;
     text-align: center;
 `
-
+const Parrafo = styled.p`
+    
+font-size: 40px;
+margin-top : 100px;
+margin-left: 150px;
+margin-right: 150px;
+text-align: justify;
+line-height: 60px;
+font-family: Arial, Helvetica, sans-serif
+    
+`
 function Texto(props) {
 
 return(
-<>
+    <>
+<Parrafo> Bienvenid@s a Nido de Palabras, hogar de lo dicho, lo por decir y falla para indecibles. 
+<br/> Acá hay cosas originales, variadas y tal vez divertidas alrededor de la Literatura.
 
-<Sti><h1>La voz de lxs poetas</h1></Sti>
-<Sti4> www.nidodepalabras.online </Sti4>
-<div className="lista">
-    <Sti3>
-    <Sti2>Voces</Sti2> 
-    <Sti2>Bios</Sti2>
-    <Sti2>Eventos</Sti2>
-    <Sti2>Antología</Sti2></Sti3>
-{props.palabra} 
-</div>
+Desde entrevistas inéditas hasta poesía libre; nuestro objetivo es 
+<b>inspirar y conectar a través de palabras</b>. 
+<br/>También podrás escuchar entrevistas con escritores, música y poesía dicha por sus autores.
+Una idea: las palabras también pueden ser nido.
+
+</Parrafo>
+
+
 </>
 )
 }

@@ -32,7 +32,9 @@ background-color: rgba(255, 0, 0, 0);}
 84%{
 transform: translate(-300px, 50px)scale(4);
 opacity:1;
-background-color: rgba(255, 0, 0, 0);}
+background-color: rgba(255, 0, 0, 0);
+
+}
 
 86%{
 transform: translate(-300px, 50px)scale(4);

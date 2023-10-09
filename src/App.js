@@ -3,6 +3,7 @@ import React from 'react';
 // import Sti from './Texto.jsx';
 import Texto from './components/Texto.jsx';
 import Head from "./components/Head.jsx"
+import Spotify from './components/Spotify.jsx';
 
 
 function App() {
@@ -10,9 +11,14 @@ function App() {
     <>
     <div className='App'>
       <Head/>
-    <Texto palabra=""/>
+      <Texto/>
+      <Spotify/>
+  
+   
       
      </div>
+
+     
      </> 
       );
 }
