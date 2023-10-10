@@ -34,7 +34,6 @@ padding: 20px `
 
 function App() {
 
-  const dev = "<Dev/>"
   return (
     <>
     <div className='App'>
