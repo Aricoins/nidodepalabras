@@ -28,7 +28,6 @@ const Imagen = styled.img`
 z-index: 2;
 animation: ${bAnimation} 15s 5s forwards;
 background-size: 100%;
- 
 `;
 
 const flyAnimation = keyframes`
@@ -209,12 +208,15 @@ z-index:1 ;
 
 export default function Head() {
   return (
+     <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/a3IGFA4BKrE40" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     <Container>
     <Imagen />
+      
       <Bird>
      <Icon className={styles.tamanio}></Icon>
      </Bird>
      
      </Container>
+       </div>
   );
 }
