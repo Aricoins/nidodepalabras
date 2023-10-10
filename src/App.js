@@ -48,7 +48,7 @@ function App() {
 <Li>   ! Narrativa   </Li>
 <Li>   ! Esotérica    </Li>
 <Li>   !  InterLibres   </Li>
-<Li>   ! {dev}</Li>
+<Li>   ! ${dev}</Li>
 </Ul>
 
       </Nav>
