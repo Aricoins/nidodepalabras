@@ -210,7 +210,7 @@ export default function Head() {
   return (
      <Container>
     <Imagen />
-      <
+
       <Bird>
      <Icon className={styles.tamanio}></Icon>
      </Bird>
