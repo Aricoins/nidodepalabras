@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import img0 from "../assets/img0.webp";
-import img1 from "../assets/img2.webp";
+import img1 from "https://giphy.com/clips/ge8f4At0BejIh0eiOT";
 import Icon from "./Icon";
 import styles from "./Head.css";
 
