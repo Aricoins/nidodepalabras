@@ -20,7 +20,7 @@ const Container = styled.div`
   background-size: cover;
   margin-right: 0;
   margin: 0 auto;
-  animation: ${volar} .6s steps(9) forwards;
+  animation: ${volar} .6s steps(9) altenate forwards easy-in;
   
  `;
 
