@@ -38,6 +38,7 @@ function App() {
     <>
     <div className='App'>
       <Head/>
+    
       <Nav>
 <Ul>
 <Li> ! Inicio    </Li>
