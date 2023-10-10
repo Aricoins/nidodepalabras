@@ -1,10 +1,11 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import img0 from "../assets/img0.webp";
+import img0 from "https://giphy.com/embed/a3IGFA4BKrE40";
 import img1 from "https://giphy.com/clips/ge8f4At0BejIh0eiOT";
 import Icon from "./Icon";
 import styles from "./Head.css";
-
+div style={{ width: '100%', height: 0, paddingBottom: '56%', position: 'relative' }}>
+  
 const bAnimation = keyframes`
 0% {
   background-image: url("${img1}");
@@ -210,18 +211,7 @@ export default function Head() {
   return (
      <Container>
     <Imagen />
-      <div style={{ width: '100%', height: 0, paddingBottom: '56%', position: 'relative' }}>
-  <iframe
-    src="https://giphy.com/embed/a3IGFA4BKrE40"
-    width="100%"
-    height="100%"
-    style={{ position: 'absolute' }}
-    frameBorder="0"
-    className="giphy-embed"
-    allowFullScreen
-  ></iframe>
-
-
+      <
       <Bird>
      <Icon className={styles.tamanio}></Icon>
      </Bird>
