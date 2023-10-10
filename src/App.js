@@ -32,8 +32,6 @@ flex-direction: row;
 align-content: row;
 padding: 20px `
 
-const dev = "<Dev/>"
-
 function App() {
 
   const dev = "<Dev/>"
@@ -48,7 +46,7 @@ function App() {
 <Li>   ! Narrativa   </Li>
 <Li>   ! Esotérica    </Li>
 <Li>   !  InterLibres   </Li>
-<Li>   ! ${dev}</Li>
+<Li>   ! dev</Li>
 </Ul>
 
       </Nav>
