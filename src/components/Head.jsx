@@ -216,7 +216,7 @@ export default function Head() {
      </Bird>
      
      </Container>
-       </div>
+
  
   );
 }
