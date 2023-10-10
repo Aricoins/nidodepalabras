@@ -4,7 +4,6 @@ import img0 from "https://giphy.com/embed/a3IGFA4BKrE40";
 import img1 from "https://giphy.com/clips/ge8f4At0BejIh0eiOT";
 import Icon from "./Icon";
 import styles from "./Head.css";
-div style={{ width: '100%', height: 0, paddingBottom: '56%', position: 'relative' }}>
   
 const bAnimation = keyframes`
 0% {
