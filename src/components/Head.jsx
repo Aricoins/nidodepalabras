@@ -1,49 +1,77 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import url from "../assets/img2.png";
+import img0 from "../assets/img0.webp";
+import img1 from "../assets/img2.webp";
 import Icon from "./Icon";
 import styles from "./Head.css";
+
+const bAnimation = keyframes`
+0% {
+  background-image: url("${img1}");
+}
+94% {
+  background-image: url("${img1}");
+}
+95% {
+  background-image: url("${img0}");
+}
+100% {
+  background-image: url("${img0}");
+}
+`;
 
 const Imagen = styled.img`
   width: 100%; /* Ocupa el ancho completo de la pantalla */
   height: 90vh; /* Ocupa la altura completa de la pantalla */
   object-fit: cover; /* Ajusta el tamaño manteniendo la relación de aspecto */
-  background: rgb(34,193,195);
-background: linear-gradient(40deg, #e9eeee 40%, #f8c703 100%);
-left: 0;
+ left: 0;
+z-index: 2;
+animation: ${bAnimation} 15s 5s forwards;
+background-size: 100%;
  
 `;
 
 const flyAnimation = keyframes`
+
   0% {
-    transform: translate(-1000px, -80px) rotate(2deg) scale(0.1) ;
+    transform: translate(60px, -80px) scale(0.3) scaleX(-1) ;
   opacity: 1
   }
-  65%{
-transform: translate(-300px, 0px)scale(3);
+  
+  10%{
+transform: translate(-650px, 0px) rotate(25deg) scale(0.8) scaleX(-1);
 opacity:1;
 background-color: rgba(255, 0, 0, 0);}
 
-  75%{
-transform: translate(-300px,50px)scale(4);
+13%{
+transform: translate(-700px, -50px)rotate(20deg)  scale(0.8) scaleX(-1) ;
+opacity:1;
+background-color: rgba(255, 0, 0, 0);}
+  15%{
+transform: translate(-1050px,-80px)scaleX(1)scale(0.8)rotate(-20deg) ;
+opacity:1;
+background-color: rgba(255, 0, 0, 0);}
+20%{
+transform: translate(-1100px, -90px)scaleX(1)scale(0.8)rotate(-20deg) ;
 opacity:1;
 background-color: rgba(255, 0, 0, 0);}
 
-84%{
+
+94%{
 transform: translate(-300px, 50px)scale(4);
 opacity:1;
-background-color: rgba(255, 0, 0, 0);
-
+background-color: rgba(255, 0, 0, 0); 
+border-radius: 50%
 }
 
-86%{
+95%{
 transform: translate(-300px, 50px)scale(4);
 opacity:1;
 background-color: #f7fbf673;  
 border-radius: 50%
 }
 
-90%{
+96%{
 transform: translate(-300px, 50px)scale(4);
 opacity:1;
 background-color: rgba(255, 0, 0, 0);
@@ -53,7 +81,7 @@ border-radius: 100%;
 }
 
 100%{
-transform: translate(900px, -200px)scale(9);
+transform: translate(1900px, -200px)scale(9);
 opacity:1;
 }` 
 
@@ -78,15 +106,14 @@ const flyAnimationMobile = keyframes`
     opacity: 1;
   }
 `;
-
 const Bird = styled.div`
   --screen-width: 100vw;
   --screen-height: 100vh;
   position:absolute;
   top: 20px;
   right: 10%;
-  animation: ${flyAnimation} 15s infinite;
-
+  animation: ${flyAnimation} 15s 5s forwards;
+z-index: 1;
   @media (max-width: 600px) {
      animation: ${flyAnimationMobile} 10s infinite;
   }
@@ -124,12 +151,39 @@ const Subtitulo= styled.div`
   font-size: 50px;
 opacity:0.7`
 
+
+const bbAnimation = keyframes`
+  0% {
+    background-color: #f0d50973;  
+  //  background: linear-gradient(0, #e7f4f4 0%, #c3e0ce 25%, #3ae6c1 50%, #05ccf9 75%, #030c75 100%);
+  }
+  25% {
+    background-color: #38f40973; 
+  //  background: linear-gradient(0, #80f3f3 0%, #65ee9a 25%, #9af3e0 50%, #73d3e8 75%, #0a19c6 100%);
+  }
+
+   50% {
+    background-color: #f49e09e8; 
+ //background: linear-gradient(0, #80f3f3 0%, #65ee9a 25%, #9af3e0 50%, #73d3e8 75%, #0a19c6 100%);
+  }
+   75% {
+    background-color: #020a0073; 
+  //  background: linear-gradient(0, #80f3f3 0%, #65ee9a 25%, #9af3e0 50%, #73d3e8 75%, #0a19c6 100%);
+  }
+   100% {
+    background-color:  #f0d50973; }
+`;
+
+
 const Container = styled.div`
+animation: ${bbAnimation} 40s infinite;
+z-index:1 ;
   @media (max-width: 600px) {
     ${Imagen} {
       width: 200%;
       height: 50%;
       margin-bottom: 400px;
+      z-index: 0
     }
 
     ${Titulo} {
@@ -156,7 +210,7 @@ const Container = styled.div`
 export default function Head() {
   return (
     <Container>
-    <Imagen src={url} />
+    <Imagen />
       <Bird>
      <Icon className={styles.tamanio}></Icon>
      </Bird>

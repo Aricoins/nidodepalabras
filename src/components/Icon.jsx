@@ -1,26 +1,26 @@
 
 import styled, { keyframes } from 'styled-components';
-import imagen from './blue.png';
+import imagen from './blues.png';
 
 const volar = keyframes`
   0% {
     background-position: 0px;
-    transform: scale(0.5);
+    transform: scale(0.3);
   }
   100% {
-    background-position: -1800px;
-    transform: scale(0.5);
+    background-position: -2700px;
+    transform: scale(0.3);
   }
 `;
 
 const Container = styled.div`
-  width: 190px;
-  height: 220px;
+  width: 300px;
+  height: 290px;
   background-image: url(${imagen});
   background-size: cover;
   margin-right: 0;
   margin: 0 auto;
-  animation: ${volar} 0.8s steps(9) infinite;
+  animation: ${volar} .6s steps(9) infinite;
 `;
 
 

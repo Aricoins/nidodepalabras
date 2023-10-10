@@ -9,7 +9,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors());
-
+app.get("/autorize")
 app.get('/getSpotifyPlaylist', async (req, res) => {
   try {
     const response = await fetch('https://api.spotify.com/v1/tracks/2TpxZ7JUBn3uw46aR7qd6V', {
