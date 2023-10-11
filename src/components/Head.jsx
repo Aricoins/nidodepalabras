@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import img0 from "../assets/7SYx.gif";
 import arbol from "../assets/arbol.png";
 import Icon from "./Icon";
-import styles from "./Head.css";
+
   
 
 const Imagen = styled.div`
@@ -121,7 +121,7 @@ const Subtitulo= styled.div`
   font-size: 50px;
 opacity:0.7`
 
-
+/* 
 const bbAnimation = keyframes`
   0% {
     background-color: #f0d50973;  
@@ -142,7 +142,9 @@ const bbAnimation = keyframes`
   }
    100% {
     background-color:  #f0d50973; }
-`;
+`; */
+
+
 const Container = styled.div`
 background-image: url(${img0});
 background-size: 100%;
