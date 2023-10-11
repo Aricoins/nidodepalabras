@@ -1,77 +1,52 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import img0 from "https://giphy.com/embed/a3IGFA4BKrE40";
-import img1 from "https://giphy.com/clips/ge8f4At0BejIh0eiOT";
+import img0 from "../assets/7SYx.gif";
+import arbol from "../assets/arbol.png";
 import Icon from "./Icon";
 import styles from "./Head.css";
   
-const bAnimation = keyframes`
-0% {
-  background-image: url("${img1}");
-}
-94% {
-  background-image: url("${img1}");
-}
-95% {
-  background-image: url("${img0}");
-}
-100% {
-  background-image: url("${img0}");
-}
-`;
 
-const Imagen = styled.img`
-  width: 100%; /* Ocupa el ancho completo de la pantalla */
-  height: 90vh; /* Ocupa la altura completa de la pantalla */
-  object-fit: cover; /* Ajusta el tamaño manteniendo la relación de aspecto */
- left: 0;
-z-index: 2;
-animation: ${bAnimation} 15s 5s forwards;
-background-size: 100%;
-`;
+const Imagen = styled.div`
+  width: 800px; /* Ocupa el ancho completo de la pantalla */
+  height: 600px; /* Ocupa la altura completa de la pantalla */
+background-image: url(${arbol});
+background-size: 80%;
+background-repeat: no-repeat;
+background-position: center;
+margin-top: -100px;
+position: absolute;
+bottom: 0px;
+top: 520px;
 
+`;
 const flyAnimation = keyframes`
 
   0% {
-    transform: translate(60px, -80px) scale(0.3) scaleX(-1) ;
+    transform: translate(200px, 300px) scale(0.3) scaleX(-1) ;
   opacity: 1
   }
   
-  10%{
-transform: translate(-650px, 0px) rotate(25deg) scale(0.8) scaleX(-1);
-opacity:1;
-background-color: rgba(255, 0, 0, 0);}
-
-13%{
-transform: translate(-700px, -50px)rotate(20deg)  scale(0.8) scaleX(-1) ;
-opacity:1;
-background-color: rgba(255, 0, 0, 0);}
-  15%{
-transform: translate(-1050px,-80px)scaleX(1)scale(0.8)rotate(-20deg) ;
-opacity:1;
-background-color: rgba(255, 0, 0, 0);}
-20%{
-transform: translate(-1100px, -90px)scaleX(1)scale(0.8)rotate(-20deg) ;
+  20%{
+transform: translate(-95px, 400px) rotate(25deg) scale(0.8) scaleX(-1);
 opacity:1;
 background-color: rgba(255, 0, 0, 0);}
 
 
-94%{
-transform: translate(-300px, 50px)scale(4);
+30%{
+transform: translate(-400px, 450px)scaleX(1)scale(0.8)rotate(-20deg) ;
 opacity:1;
-background-color: rgba(255, 0, 0, 0); 
-border-radius: 50%
-}
+background-color: rgba(255, 0, 0, 0);}
 
-95%{
-transform: translate(-300px, 50px)scale(4);
+
+45%{
+transform: translate(50px, 500px)scaleX(1)scale(1)rotate(0deg) ;
 opacity:1;
-background-color: #f7fbf673;  
-border-radius: 50%
-}
+background-color: rgba(255, 0, 0, 0);}
 
-96%{
-transform: translate(-300px, 50px)scale(4);
+
+
+76%{
+transform: translate(200px, 500px)scale(3);
 opacity:1;
 background-color: rgba(255, 0, 0, 0);
 
@@ -80,10 +55,9 @@ border-radius: 100%;
 }
 
 100%{
-transform: translate(1900px, -200px)scale(9);
+transform: translate(1900px, -800px)scale(4);
 opacity:1;
 }` 
-
 const flyAnimationMobile = keyframes`
   0% {
     transform: translate(calc(-1 * var(--screen-width)), calc(-1 * var(--screen-height))) rotate(2deg) scale(0.1);
@@ -108,18 +82,14 @@ const flyAnimationMobile = keyframes`
 const Bird = styled.div`
   --screen-width: 100vw;
   --screen-height: 100vh;
-  position:absolute;
   top: 20px;
   right: 10%;
-  animation: ${flyAnimation} 15s 5s forwards;
-z-index: 1;
+  animation: ${flyAnimation} 15s infinite;
+
   @media (max-width: 600px) {
      animation: ${flyAnimationMobile} 10s infinite;
   }
 `;
-
-
-
 
 const fadeIn= keyframes`
   0%{
@@ -131,13 +101,14 @@ transition: traslate (0, 0);
 `
 const Titulo = styled.h1`
   position: absolute;
-  top: 300px;
-  left: 200px;
+  top: 820px;
+  left: 600px;
+  bottom:0;
    width: 900px;
   color: #f8f9f8;
   box-shadow:inset black ; 
  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 80px;
+  font-size: 90px;
   animation: ${fadeIn} 2s normal;
 `;
 const Subtitulo= styled.div`
@@ -172,11 +143,16 @@ const bbAnimation = keyframes`
    100% {
     background-color:  #f0d50973; }
 `;
-
-
 const Container = styled.div`
-animation: ${bbAnimation} 40s infinite;
-z-index:1 ;
+background-image: url(${img0});
+background-size: 100%;
+height: 1000px;
+width: 100%;
+z-index: 0;
+overflow: hidden;
+background-repeat: no-repeat;
+  
+
   @media (max-width: 600px) {
     ${Imagen} {
       width: 200%;
@@ -206,15 +182,18 @@ z-index:1 ;
 `;
 
 
+
 export default function Head() {
   return (
-     <Container>
-    <Imagen />
 
-      <Bird>
-     <Icon className={styles.tamanio}></Icon>
+     <Container>
+     <Bird>
+     <Icon ></Icon>
      </Bird>
-     
+      <Titulo>Nido de Palabras</Titulo>
+     <Imagen  />
+    
+      
      </Container>
 
  

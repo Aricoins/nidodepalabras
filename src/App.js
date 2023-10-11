@@ -32,6 +32,17 @@ flex-direction: row;
 align-content: row;
 padding: 20px `
 
+
+const Lo = styled.li`
+display:flex;
+flex-direction: row;
+align-content: row;
+padding: 20px ;
+&::before{ content : " <> " ;}
+&::after{ content : " <> " ;
+
+}`
+
 function App() {
 
   return (
@@ -43,10 +54,11 @@ function App() {
 <Ul>
 <Li> ! Inicio    </Li>
 <Li>  ! Poética   </Li>
-<Li>   ! Narrativa   </Li>
+<Li>   ! Estética   </Li>
 <Li>   ! Esotérica    </Li>
+<Li>   ! Erótica   </Li>
 <Li>   !  InterLibres   </Li>
-<Li>   ! dev</Li>
+<Lo>   ! dev </Lo>
 </Ul>
 
       </Nav>
