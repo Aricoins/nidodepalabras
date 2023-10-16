@@ -1,9 +1,7 @@
-
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-import SearchBar from "./Searchbar"
 /*
 --off-red-rgb: #F10505ff;
 --red-cmyk: #F32E2Eff;
@@ -16,15 +14,15 @@ import SearchBar from "./Searchbar"
 
 
 const Fijo = styled.nav`
-  position: fixed;
-z-index:1;
- top: 0;
- width: 100%;
- background-color: #05061d
-
+    position: fixed;
+    height: 10px;
+    z-index:1;
+    bottom:10%;
+   background-color: #05061d;
+   width:100%;
+ 
 `
 const Navigator= styled.div`
-position: fixed;
 left: 0%;
 background-color: #05061d ;
 padding: 1%;
@@ -32,8 +30,7 @@ opacity: 0.9;
 align-items: center;
 display: flex;
    justify-content: center;
-   width: 100%;
-@media screen and (max-width : 700px) {
+ @media screen and (max-width : 700px) {
   flex-direction: column;
   
 }
@@ -44,7 +41,6 @@ border-color: #FBFCFCff;
 color: F8AAAAff;
 background: #F45757ff;
 width: 15%;
-height: 3em;
 font-size: medium;
 text-align: center;
 font-size: x-large;
@@ -92,10 +88,14 @@ export default function Nav (props){
         <>
         <Fijo>
         <Navigator>
-       <Botones> <StyledLink to="/create"> Create </StyledLink> </Botones>
-       <Botones> <StyledLink to="/home">Home</StyledLink></Botones>
-       <Botones> <StyledLink to="/favorites">Favorites</StyledLink></Botones>
-       <SearchBar  searchUser={props.searchDriver} />
+       <Botones> <StyledLink to="/inicio"> Inicio </StyledLink> </Botones>
+       <Botones> <StyledLink to="/poetica">Poética</StyledLink></Botones>
+       <Botones> <StyledLink to="/estetica">Estética</StyledLink></Botones>
+       <Botones> <StyledLink to="/erotica">Erótica</StyledLink></Botones>
+       <Botones> <StyledLink to="/interlibres">InterLibres</StyledLink></Botones>
+   { 
+       //  <SearchBar  searchUser={props.searchDriver} />
+    }
        </Navigator>
        </Fijo> </>
               )

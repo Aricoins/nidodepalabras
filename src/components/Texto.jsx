@@ -49,14 +49,18 @@ const Sti4 = styled.h3`
 `*/
 const Parrafo = styled.p`
     
-font-size: 40px;
+font-size: 20px;
 margin-top : 100px;
-margin-left: 150px;
-margin-right: 150px;
+margin-left: 200px;
+margin-right: 200px;
 text-align: justify;
 line-height: 60px;
-font-family: Arial, Helvetica, sans-serif
-    
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fafaf8;
+
+    @media (max-width:600px){
+        font-size: 12px;
+    }
 `
 function Texto(props) {
 

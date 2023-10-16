@@ -1,24 +1,25 @@
 import styled from 'styled-components';
+import img from "../../src/assets/cisne.webp"
 const Iframe = styled.iframe`
-margin-top:100px;
-margin-left: 200px;
-    width: 1000px;
-    height: 350px;
-    background-color: #086b03;
-    border-radius:18px;
-    border-color: green;
-    border: 30px;
+margin-top:10%;
+    width: 90%;
+    height: 100%;
+    left:5%;
+     border-radius:18px;
+    position: relative
 `
+
+
 
 const Spotify = () => {
  
-
 
 //    https://open.spotify.com/embed/playlist/2tkA6L4HFfYvEm5NMgOZpy
   return (<>
   <div>
     <Iframe src="https://open.spotify.com/embed/playlist/2tkA6L4HFfYvEm5NMgOZpy?utm_source=generator"  frameBorder="0"  allow="autoplay; clipboardWrite; encryptedMedia; fullscreen; pictureInPicture" loading="eager"/>
-    </div> </>);
+    </div> Pronto <img src={img}/> pronto </>);
+    
 };
 
 export default Spotify;
