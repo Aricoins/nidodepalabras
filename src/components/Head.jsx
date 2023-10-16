@@ -134,9 +134,10 @@ const Container = styled.div`
   overflow: hidden;
   background-repeat: no-repeat;
   background-attachment: initial;
-  background-size: 100% 150%;
-
-  @media (max-width:1300px) {
+  background-size: 100% 100%;
+  padding-bottom: 20%;
+  background-color: black;
+   @media (max-width:1300px) {
       height: 100%;
        ${Titulo}{
       font-size: 350%;

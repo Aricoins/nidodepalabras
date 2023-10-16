@@ -15,87 +15,84 @@ import styled from 'styled-components'
 
 const Fijo = styled.nav`
     position: fixed;
-    height: 10px;
-    z-index:1;
-    bottom:10%;
+    height: 5%;
+    z-index: 1000;
+    bottom: 10%;
    background-color: #05061d;
    width:100%;
+   left:0;
  
 `
 const Navigator= styled.div`
 left: 0%;
 background-color: #05061d ;
 padding: 1%;
-opacity: 0.9;
+opacity: 1;
 align-items: center;
 display: flex;
    justify-content: center;
+
  @media screen and (max-width : 700px) {
   flex-direction: column;
   
 }
 `
+
+const StyledLink = styled(NavLink)`
+  text-decoration: none;
+  text-decoration: none;
+  font-size: 20px ;
+  color: black;
+  background-color: #F45757ff;
+  font-size: 80%;
+  width:15%;
+  display: inline-block;
+  border-radius: 8%;
+  transition-duration: 1s;
+  z-index: 7;
+   &active{
+    background-color: #000703;
+    font-weight: bold;
+    color: #e4d8d8;
+    
+  }
+  :hover{
+    width: 100%;
+  }
+  `
 const Botones = styled.button`
 border-style: solid;
-border-color: #FBFCFCff;
 color: F8AAAAff;
-background: #F45757ff;
-width: 15%;
+background: #f4a111;
+width: 100%;
+height: 2em;
 font-size: medium;
 text-align: center;
 font-size: x-large;
 display: inline-block;
   border-radius: 8%;
   transition-duration: 1s;
-       :hover{
-      color:black;
-      width: 100%;
-        background-color: #F8AAAAff;
-        border-color: black;
-        border-bottom: black;
-        border-style: inset;
-        -webkit-text-stroke: 1px white;
+
+   
       
-     }
-          @media  only screen and (max-width : 900px){
+            @media  only screen and (max-width : 900px){
  
 padding: 20px;
 width: 100% }
-
-
 `
-const StyledLink = styled(NavLink)`
-  text-decoration: none;
-  border-width: 1px;
-  border-color: #F8AAAAff;
-  font-size: 20px ;
-  color: black;
-  background-color: #F45757ff;
-  font-size: 80%;
- &active{
-    background-color: #000703;
-    font-weight: bold;
-    color: #e4d8d8;
-    
-  }
 
 
-
-  `
 export default function Nav (props){
 
     return(
         <>
         <Fijo>
         <Navigator>
-       <Botones> <StyledLink to="/inicio"> Inicio </StyledLink> </Botones>
-       <Botones> <StyledLink to="/poetica">Poética</StyledLink></Botones>
-       <Botones> <StyledLink to="/estetica">Estética</StyledLink></Botones>
-       <Botones> <StyledLink to="/erotica">Erótica</StyledLink></Botones>
-       <Botones> <StyledLink to="/interlibres">InterLibres</StyledLink></Botones>
-   { 
-       //  <SearchBar  searchUser={props.searchDriver} />
-    }
+       <StyledLink to="/inicio"> <Botones> Inicio </Botones> </StyledLink>
+       <StyledLink to="/poetica"> <Botones> Poética</Botones> </StyledLink>
+       <StyledLink to="/estética"> <Botones> Estética </Botones> </StyledLink>
+       <StyledLink to="/erótica"> <Botones> Erótica </Botones> </StyledLink>
+       <StyledLink to="/InterLibres"> <Botones> Interlibres </Botones> </StyledLink>
        </Navigator>
        </Fijo> </>
               )

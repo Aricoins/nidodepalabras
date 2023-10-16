@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0;
     width: 100%;
-    background-color:black;
+    background-color:orangered;
   }
 `;
 const Button = styled.a`
@@ -57,10 +57,11 @@ function App() {
     <>
      
       <GlobalStyle />
+    
       <ScrollAnimation>
           <Routes>
  
-          <Route path='/' element={<><ScrollAnimation></ScrollAnimation><ScrollAnimation><Head/></ScrollAnimation><ScrollAnimation><Nav /></ScrollAnimation><ScrollAnimation><Texto/></ScrollAnimation> <ScrollAnimation><Spotify/></ScrollAnimation></>} />
+          <Route path='/' element={<><Head/><ScrollAnimation><Texto/></ScrollAnimation> <ScrollAnimation><Spotify/></ScrollAnimation></>} />
           
           <Route path='/inicio' element={<Head/>} />
           {/* <Route path='/poetica' element={<Poetica/>}/>
@@ -70,6 +71,7 @@ function App() {
                   />
           } /> */}
           </Routes>
+          <Nav />
           </ScrollAnimation>
    
 
