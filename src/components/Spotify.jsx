@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import img from "../../src/assets/cisne.webp"
+import ScrollAnimation from './ScrollAnimation';
 const Iframe = styled.iframe`
 margin-top:10%;
     width: 90%;
@@ -18,7 +19,7 @@ const Spotify = () => {
   return (<>
   <div>
     <Iframe src="https://open.spotify.com/embed/playlist/2tkA6L4HFfYvEm5NMgOZpy?utm_source=generator"  frameBorder="0"  allow="autoplay; clipboardWrite; encryptedMedia; fullscreen; pictureInPicture" loading="eager"/>
-    </div> Pronto <img src={img} alt="Pronto, Al cisne salvaje"/> pronto </>);
+    </div> Pronto <ScrollAnimation><img src={img} alt="Pronto, Al cisne salvaje"/> pronto </ScrollAnimation></>);
     
 };
 

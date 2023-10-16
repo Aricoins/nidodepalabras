@@ -1,6 +1,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "./ScrollAnimation";
 
 /*
 const Sti = styled.article`
@@ -66,6 +67,7 @@ function Texto(props) {
 
 return(
     <>
+    <ScrollAnimation>
 <Parrafo> Bienvenid@s a Nido de Palabras, hogar de lo dicho, lo por decir y falla para indecibles. 
 <br/> Acá hay cosas originales, variadas y tal vez divertidas alrededor de la Literatura.
 
@@ -75,6 +77,8 @@ Desde entrevistas inéditas hasta poesía libre; nuestro objetivo es
 Una idea: las palabras también pueden ser nido.
 
 </Parrafo>
+</ScrollAnimation>
+
 
 
 </>
