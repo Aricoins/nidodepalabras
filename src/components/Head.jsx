@@ -134,8 +134,7 @@ const Container = styled.div`
   overflow: hidden;
   background-repeat: no-repeat;
   background-attachment: initial;
-  background-size: 100% 100vh;
-  height:100px;
+  background-size: 100% 150%;
 
   @media (max-width:1300px) {
       height: 100%;
