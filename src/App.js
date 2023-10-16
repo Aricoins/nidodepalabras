@@ -60,7 +60,7 @@ function App() {
       <ScrollAnimation>
           <Routes>
  
-          <Route path='/' element={<><ScrollAnimation><Button>Botón</Button></ScrollAnimation><ScrollAnimation><Head/></ScrollAnimation><ScrollAnimation><Nav /></ScrollAnimation><ScrollAnimation><Texto/></ScrollAnimation> <ScrollAnimation><Spotify/></ScrollAnimation></>} />
+          <Route path='/' element={<><ScrollAnimation></ScrollAnimation><ScrollAnimation><Head/></ScrollAnimation><ScrollAnimation><Nav /></ScrollAnimation><ScrollAnimation><Texto/></ScrollAnimation> <ScrollAnimation><Spotify/></ScrollAnimation></>} />
           
           <Route path='/inicio' element={<Head/>} />
           {/* <Route path='/poetica' element={<Poetica/>}/>
