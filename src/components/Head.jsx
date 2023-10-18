@@ -1,10 +1,60 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled, { keyframes } from "styled-components";
-import img0 from "../assets/giphy.gif";
-import arbol from "../assets/arbol.png";
+import img0 from "../assets/giggl3s4.gif";
+import arbol from "../assets/arbol.webp";
 import Icon from "./Icon";
-import Nav from "./Navbar";
+//import Nav from "./Navbar";
 //Video by Taryn Elliott: https://www.pexels.com/video/a-video-footage-of-forest-trees-9682891/
+
+
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+const rotateBackAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+`;
+
+const Spinner = styled.div`
+  width: 48px;
+  height: 48px;
+  left : 50%;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #8ed2c9  rgb(0, 170, 160)  transparent;
+  box-sizing: border-box;
+  animation: ${rotateAnimation} 1s linear infinite;
+
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent  #d55b3e #d55b3e;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: ${rotateBackAnimation} 0.5s linear infinite;
+    transform-origin: center center;
+  }
+`;
 
 const fadeIn = keyframes`
   0% {
@@ -82,44 +132,47 @@ const Bird = styled.div`
 const Titulo = styled.h1`
   position: absolute;
   top: 30%;
-  left: 50%;
-  width: 80%;
+left: 0%;
+  width: 60px;
   color: #f8f9f8;
-  opacity: 0.9;
+  -webkit-text-stroke: ##00aaa0 2px;
+  opacity: 1;
   box-shadow: inset black;
   font-family: Open Sans, sans-serif;
+  font-size: xx-large;
+  font-weight: 800px;
   animation: ${fadeIn} 1s forwards;
-  z-index: 1; 
-  text-shadow: 0 0 3px #f0c803, 0 0 5px #032803; 
+  z-index: 2; 
+  text-shadow: 0 0 3px #d55b3e 0 0 5px #f8f9f8; 
   opacity: 0;
   
 `;
 const Subtitulo = styled.div`
  position: absolute;
   top: 60%;
-  left: 80%;
-  width: 60%;
+   width: 40%;
   color: #00aaa0;
   opacity: 0.9;
   box-shadow: inset black;
   font-family: Open Sans, sans-serif;
-  font-size: 400%;
-  animation: ${fadeIn} 2s forwards;
+  font-size: 60px;
+  animation: ${fadeIn} 1.2s forwards;
   animation-delay: 3s;
   z-index: 1;
-  text-shadow: 0 0 3px #f0c803, 0 0 5px #032803; 
+  text-shadow: 0 0 3px #07f003, 0 0 5px #e0efe0; 
   opacity: 0;
+  left: 5px;
   `
 const Arbol = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   transform: translateX(50px);
-  transform: translateY(-50px);
+  transform: translateY(-80px);
   background-image: url(${arbol});
   background-size: 100% 100%;
   background-repeat: no-repeat;
-   left: 5%;
+   right: 5%;
 margin-bottom: 0%;
 padding-top: 0%;
 right: 0px;
@@ -135,8 +188,7 @@ const Container = styled.div`
   background-size: 100% 100%;
   padding-bottom: 2%;
   background-color: black;
-  border-bottom-left-radius: 25%;
-   @media (max-width:1300px) {
+    @media (max-width:1300px) {
       height: 100%;
        ${Titulo}{
       font-size: 350%;
@@ -160,10 +212,10 @@ width: 30%
   }
      @media (max-width: 992px) {
        ${Titulo}{
-      font-size: 250%;
-      left:40%;
-      top:50%;
-      width:400px;
+      font-size: 70px;
+      left:4%;
+      top:40%;
+      width:100%;
     }
     ${Subtitulo}{
       font-size: 20px;
@@ -213,18 +265,39 @@ width: 30%
      }
   `;
 
+
+
 export default function Head() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simula una carga de datos 
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    // Limpia el timeout en el desmontaje del componente
+    return () => clearTimeout(timeout);
+  }, []);
+
+  
+
+ 
   return (
-    <><Nav/>
+    <> {loading ? (
+      <Spinner />
+    ) : (
       <Container>
+     <Titulo>Nido de Palabras</Titulo>
       <Arbol />
         <Bird>
           <Icon />
         </Bird>
-        <Titulo>Nido de Palabras</Titulo>
-        <Subtitulo> contenidos </Subtitulo>
-    
-      </Container>
+        
+        <Subtitulo> contenidos  </Subtitulo>
+       
+      </Container>)
+}
     </>
   );
 }

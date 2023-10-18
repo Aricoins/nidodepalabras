@@ -1,7 +1,9 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-
+import aos from "aos";
+import "aos/dist/aos.css";
+import Aos from "aos";
 /*
 const Sti = styled.article`
     display: flex;
@@ -50,24 +52,27 @@ const Sti4 = styled.h3`
 const Parrafo = styled.p`
     
 font-size: 20px;
-margin-top : 100px;
-margin-left: 200px;
-margin-right: 200px;
+margin-top : 20px;
+margin-left: 100px;
+margin-right: 100px;
 text-align: justify;
-line-height: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fafaf8;
+line-height: 40px;
+font-family: Open Sans;
+color: #e65a03;
+font-weight: 400;
 
     @media (max-width:600px){
-        font-size: 12px;
+        font-size: 14px;
     }
 `
 function Texto(props) {
+useEffect(() => {
+    Aos.init({duration: 2000});}, []);
 
 return(
     <>
 
-<Parrafo className="wow"> Bienvenid@s a <b>Nido de Palabras</b>, espacio para lo dicho, lo por decir y hogar de indecibles. 
+<Parrafo data-aos="fade-in"> Bienvenid@s a <b>Nido de Palabras</b>, espacio para lo dicho, lo por decir y hogar de indecibles. 
 <br/> Acá hay cosas originales, variadas y tal vez divertidas alrededor de la Literatura.
 
 Desde entrevistas inéditas hasta poesía libre; nuestro objetivo es 

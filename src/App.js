@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
   }
   ` ;
 function App() {
+  const { pathname } = useLocation()
   /* const [access, setAccess] = useState(false)
   const { pathname } = useLocation()
   const navigate = useNavigate()
@@ -42,24 +43,16 @@ function App() {
 
   return (
     <>
-     
-      
-    
- 
-          <Routes>
- 
-          <Route path='/' element={
+       <Routes>
+           <Route path='/' element={
           <>
-          <GlobalStyle />
-          <Head  />
-               <Texto/>
-         <Spotify  />
-          <LaVoz/> 
-       
-          <Columnas />
+           <Head location /> <Texto/> 
+          <Spotify/>
+          <LaVoz/>      
+          <Columnas/>
+          <Nav />
           </>} />
-          
-          <Route path='/inicio' element={<Head/>} />
+           
           {/* <Route path='/poetica' element={<Poetica/>}/>
           <Route path="/favorites" element={<Estetica/>}/>
           <Route path='/Interlibres' element={ 
@@ -67,9 +60,7 @@ function App() {
                   />
           } /> */}
           </Routes>
-          <Nav />
-      
-                  
+         
 
     </>
   );
