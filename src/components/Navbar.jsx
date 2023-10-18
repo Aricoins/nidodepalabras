@@ -2,36 +2,26 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-/*
---off-red-rgb: #F10505ff;
---red-cmyk: #F32E2Eff;
---bittersweet: #F45757ff;
---light-coral: #F68181ff;
---melon: #F8AAAAff;
---tea-rose-red: #F9D3D3ff;
---white: #FBFCFCff;
-*/
+
 
 
 const Fijo = styled.nav`
     position: fixed;
-    height: 5%;
-    z-index: 1000;
+       z-index: 1000;
     bottom: 10%;
-   background-color: #05061d;
+   background-color: #d55b3e;
    width:100%;
-   left:0;
+   left: 0%;
  
 `
 const Navigator= styled.div`
-left: 0%;
-background-color: #05061d ;
-padding: 1%;
-opacity: 1;
-align-items: center;
-display: flex;
-   justify-content: center;
+background-color:  #00aaa0;
 
+opacity: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
  @media screen and (max-width : 700px) {
   flex-direction: column;
   
@@ -41,17 +31,15 @@ display: flex;
 const StyledLink = styled(NavLink)`
   text-decoration: none;
   text-decoration: none;
-  font-size: 20px ;
-  color: black;
-  background-color: #F45757ff;
-  font-size: 80%;
+    color: #e4d8d8;
+  background-color:  #00aaa0;
   width:15%;
   display: inline-block;
   border-radius: 8%;
   transition-duration: 1s;
   z-index: 7;
    &active{
-    background-color: #000703;
+    background-color: #00aaa0;
     font-weight: bold;
     color: #e4d8d8;
     
@@ -61,19 +49,27 @@ const StyledLink = styled(NavLink)`
   }
   `
 const Botones = styled.button`
-border-style: solid;
-color: F8AAAAff;
-background: #f4a111;
+border: #d55b3e solid 2px ;
+color:  #d55b3e;
+background: #fcf4d9;
 width: 100%;
-height: 2em;
-font-size: medium;
+height: 2%;
+font-size: small;
 text-align: center;
-font-size: x-large;
 display: inline-block;
-  border-radius: 8%;
-  transition-duration: 1s;
-
-   
+margin: 2px;
+  border-radius: 15% 0% 15% 0%;
+  transition-duration: 0.5s;
+  z-index: 7;
+    &:active{ 
+     
+color: #00aaa0; }
+  :hover{
+    width: 100%;
+    background: #8ed2c9; 
+    color: #d55b3e;
+  }
+ 
       
             @media  only screen and (max-width : 900px){
  

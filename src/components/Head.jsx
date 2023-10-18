@@ -1,8 +1,10 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import img0 from "../assets/7SYx.gif";
+import img0 from "../assets/giphy.gif";
 import arbol from "../assets/arbol.png";
 import Icon from "./Icon";
+import Nav from "./Navbar";
+//Video by Taryn Elliott: https://www.pexels.com/video/a-video-footage-of-forest-trees-9682891/
 
 const fadeIn = keyframes`
   0% {
@@ -14,7 +16,6 @@ const fadeIn = keyframes`
     opacity:1 ;
   }
 `;
-
 const flyAnimationMobile = keyframes`
   0% {
     transform: translate(-1000px, -40%) scale(0.08) ;
@@ -63,7 +64,6 @@ const flyAnimation = keyframes`
     opacity: 1;
   }
 `;
-
 const Bird = styled.div`
   position: relative;
   width: 100%;
@@ -79,55 +79,53 @@ const Bird = styled.div`
   
 
 `;
-
-
 const Titulo = styled.h1`
   position: absolute;
   top: 30%;
-  left: 40%;
+  left: 50%;
   width: 80%;
   color: #f8f9f8;
   opacity: 0.9;
   box-shadow: inset black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 800%;
-  animation: ${fadeIn} 2s forwards;
+  font-family: Open Sans, sans-serif;
+  animation: ${fadeIn} 1s forwards;
   z-index: 1; 
   text-shadow: 0 0 3px #f0c803, 0 0 5px #032803; 
   opacity: 0;
   
 `;
-
 const Subtitulo = styled.div`
  position: absolute;
   top: 60%;
-  left: 65%;
+  left: 80%;
   width: 60%;
-  color: #f9f9f8;
+  color: #00aaa0;
   opacity: 0.9;
   box-shadow: inset black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-size: 400%;
-  animation: ${fadeIn} 3s forwards;
-  animation-delay: 5s;
+  animation: ${fadeIn} 2s forwards;
+  animation-delay: 3s;
   z-index: 1;
   text-shadow: 0 0 3px #f0c803, 0 0 5px #032803; 
   opacity: 0;
   `
-
-const Imagen = styled.div`
+const Arbol = styled.div`
   position: absolute;
-  width: 40%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(50px);
+  transform: translateY(-50px);
   background-image: url(${arbol});
-  background-size: 80%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  top:20%;
-  left: 5%;
-  z-index: 3;
+   left: 5%;
+margin-bottom: 0%;
+padding-top: 0%;
+right: 0px;
+z-index:8;
  
 `;
-
 const Container = styled.div`
   position: relative;
   background-image: url(${img0});
@@ -135,8 +133,9 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-attachment: initial;
   background-size: 100% 100%;
-  padding-bottom: 20%;
+  padding-bottom: 2%;
   background-color: black;
+  border-bottom-left-radius: 25%;
    @media (max-width:1300px) {
       height: 100%;
        ${Titulo}{
@@ -154,7 +153,7 @@ const Container = styled.div`
     ${Bird}{
       background-size: 10%;
     }
-  ${Imagen}{
+  ${Arbol}{
 width: 30%
 
   }
@@ -172,7 +171,7 @@ width: 30%
       top:80%;
       width:300px;
     }
-    ${Imagen}{
+    ${Arbol}{
       top: 30%;
     }}
     @media (max-width: 768px) {
@@ -188,7 +187,7 @@ width: 30%
       top:80%;
       width:300px;
     }
-    ${Imagen}{
+    ${Arbol}{
       top: 30%;
       background-size: 80% 80%;
     }
@@ -205,7 +204,7 @@ width: 30%
       top:60%;
       width:300px;
     }
-    ${Imagen}{
+    ${Arbol}{
       top: 30%;
       background-size: 80% 80%;
     }
@@ -216,14 +215,15 @@ width: 30%
 
 export default function Head() {
   return (
-    <>
+    <><Nav/>
       <Container>
+      <Arbol />
         <Bird>
           <Icon />
         </Bird>
         <Titulo>Nido de Palabras</Titulo>
-        <Subtitulo>contenidos originales</Subtitulo>
-        <Imagen />
+        <Subtitulo> contenidos </Subtitulo>
+    
       </Container>
     </>
   );

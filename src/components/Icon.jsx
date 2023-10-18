@@ -5,11 +5,11 @@ import imagen from './blues.png';
 const volar = keyframes`
   0% {
     background-position: 0px;
-    transform: scale(0.3);
+    transform: scale(0.1);
   }
   100% {
     background-position: -2700px;
-    transform: scale(0.3);
+    transform: scale(0.1);
   }
 `;
 
