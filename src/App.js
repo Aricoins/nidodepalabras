@@ -6,7 +6,9 @@ import {Routes, Route, useLocation, useNavigate, useParams} from 'react-router-d
 import Texto from "./components/Texto.jsx";
 import Spotify from "./components/Spotify.jsx"
 import LaVoz from './components/LaVoz.jsx';
-import Columnas from "./components/Columnas.jsx"
+import Columnas from "./components/Columnas.jsx";
+
+
 
 
 const GlobalStyle = createGlobalStyle`
@@ -48,7 +50,7 @@ function App() {
           <>
            <Head location /> <Texto/> 
           <Spotify/>
-          <LaVoz/>      
+          <LaVoz data-aos="fade-in"/>      
           <Columnas/>
           <Nav />
           </>} />

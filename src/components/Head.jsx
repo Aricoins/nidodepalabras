@@ -135,7 +135,7 @@ const Titulo = styled.h1`
 left: 0%;
   width: 60px;
   color: #f8f9f8;
-  -webkit-text-stroke: ##00aaa0 2px;
+  -webkit-text-stroke: #00aaa0 2px;
   opacity: 1;
   box-shadow: inset black;
   font-family: Open Sans, sans-serif;

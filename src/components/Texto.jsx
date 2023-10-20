@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import aos from "aos";
 import "aos/dist/aos.css";
-import Aos from "aos";
+
 /*
 const Sti = styled.article`
     display: flex;
@@ -67,7 +67,7 @@ font-weight: 400;
 `
 function Texto(props) {
 useEffect(() => {
-    Aos.init({duration: 2000});}, []);
+    aos.init({duration: 2000});}, []);
 
 return(
     <>

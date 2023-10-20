@@ -1,17 +1,18 @@
 import banner from "../assets/lvp.png"
 import styled from "styled-components"
-import react, {useState} from "react";
+import react, {useEffect, useState} from "react";
 import audio from "../assets/rie.mp3";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 //import ScrollAnimation from "./ScrollAnimation"
 const Contenedor = styled.div`
-position: absolute;
-  top:450vh;
     display:flex;
     flex-direction: column;
-    padding: 10%;
-    height: 500%;;
+    width: 150%;
+    margin-left: -20%;
+    margin-top: -10%;
 
 `
 const Reproductor= styled.div`
@@ -47,11 +48,13 @@ line-height: 60px;
 
     const handlePlayPause = () => {
       setIsPlaying(!isPlaying);
+
     };
+    useEffect(() => { Aos.init({ duration: 2000 }); },[]);
   
     return(
 <>
-<Contenedor>
+<Contenedor data-aos="fade-in">
 
 <Img src={banner} alt="asda" />
 
