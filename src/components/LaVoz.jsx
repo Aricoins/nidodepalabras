@@ -10,9 +10,11 @@ import "aos/dist/aos.css";
 const Contenedor = styled.div`
     display:flex;
     flex-direction: column;
-    width: 150%;
-    margin-left: -20%;
-    margin-top: -10%;
+    width: 100%;
+    justify-content: center;
+        align-items: center
+
+ 
 
 `
 const Reproductor= styled.div`
@@ -21,22 +23,22 @@ align-self: center
 
 `
 const Img = styled.img`
-width:70%;
+width:100%;
 bottom:0px;
-padding: 10%;
+
 `
 const H6 = styled.p`
 
 font-size: 20px;
 margin-top : 2%;
-margin-left: 200px;
-margin-right: 200px;
+margin-left: 5%;
+margin-right: 5%;
 text-align: justify;
 line-height: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Open Sans, sans-serif;
     color:  #fcf4d9; 
-
-	background: #8ed2c9; 
+padding: 5%;
+	background: #00aaa0; 
 
   
     @media (max-width:600px){
@@ -56,7 +58,7 @@ line-height: 60px;
 <>
 <Contenedor data-aos="fade-in">
 
-<Img src={banner} alt="asda" />
+<Img data-aos="fade-in" src={banner} alt="asda" />
 
 <Reproductor>
         <audio controls>
@@ -66,7 +68,7 @@ line-height: 60px;
       </audio>
      
     </Reproductor>
-<H6>La Voz de les Poetas ha sido una serie de encuentros de poesía nacidos en Aislamiento en abril de 2020 y organizado por Nido de Palabras; hoy, el espacio adquiere versatilidad de formatos (vivo, radio, podcast) y reune a escritores de distintas latitudes que declaman sus textos a viva voz.</H6>
+<H6>La Voz de les Poetas es una serie de encuentros de poesía nacidos en Aislamiento en abril de 2020 y organizado por Nido de Palabras; hoy, el espacio adquiere versatilidad de formatos (vivo, radio, podcast) y reune a escritores de distintas latitudes que declaman sus textos a viva voz.</H6>
 
 </Contenedor> </>  )
 }
