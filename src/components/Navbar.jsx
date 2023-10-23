@@ -19,7 +19,7 @@ align-items: center;
 align-content: center;
  @media screen and (max-width : 700px) {
 
-  
+  width: 90%;
 }
 `
 
@@ -45,7 +45,11 @@ color: #00aaa0; }
 
  :hover{
   width: 100%;
+} @media screen and (max-width : 700px) {
+
+  font-size: 10px;
 }
+
 `
 
 const StyledLink = styled(NavLink)`

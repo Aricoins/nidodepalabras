@@ -63,6 +63,8 @@ font-weight: 400;
 
     @media (max-width:600px){
         font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 `
 function Texto(props) {

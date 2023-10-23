@@ -133,18 +133,17 @@ const Titulo = styled.h1`
   position: absolute;
   top: 30%;
 left: 0%;
-  width: 60px;
+  width: 40px;
   color: #f8f9f8;
-  -webkit-text-stroke: #00aaa0 2px;
-  opacity: 1;
+   opacity: 1;
   box-shadow: inset black;
   font-family: Open Sans, sans-serif;
-  font-size: xx-large;
+  font-size: large;
   font-weight: 800px;
   animation: ${fadeIn} 1s forwards;
   z-index: 2; 
   text-shadow: 0 0 3px #d55b3e 0 0 5px #f8f9f8; 
-  opacity: 0;
+
   
 `;
 const Subtitulo = styled.div`
@@ -155,13 +154,13 @@ const Subtitulo = styled.div`
   opacity: 0.9;
   box-shadow: inset black;
   font-family: Open Sans, sans-serif;
-  font-size: 60px;
+  font-size: 0px;
   animation: ${fadeIn} 1.2s forwards;
   animation-delay: 3s;
   z-index: 1;
-  text-shadow: 0 0 3px #07f003, 0 0 5px #e0efe0; 
-  opacity: 0;
   left: 5px;
+  opacity:0;
+
   `
 const Arbol = styled.div`
   position: absolute;
@@ -188,38 +187,40 @@ const Container = styled.div`
   background-size: 100% 100%;
   padding-bottom: 2%;
   background-color: black;
+
     @media (max-width:1300px) {
       height: 100%;
        ${Titulo}{
-      font-size: 350%;
-      left:40%;
-      top:40%;
+      font-size: 400%;
+      left:10%;
+      top:50%;
       width:800px;
     }
     ${Subtitulo}{
       font-size: 190%;
-      left:50%;
-      top:70%;
+      left:42%;
+      top:80%;
       width:500px;
     }
     ${Bird}{
       background-size: 10%;
     }
   ${Arbol}{
-width: 30%
+width: 30%;
+top: 30%
 
   }
   }
      @media (max-width: 992px) {
        ${Titulo}{
-      font-size: 70px;
-      left:4%;
+      font-size: 60px;
+      left:2%;
       top:40%;
       width:100%;
     }
     ${Subtitulo}{
       font-size: 20px;
-      left:40%;
+      left:2%;
       top:80%;
       width:300px;
     }
@@ -229,43 +230,50 @@ width: 30%
     @media (max-width: 768px) {
      ${Titulo}{
       font-size: 200%;
-      left:40%;
-      top:50%;
+      left:10%;
+      top:70%;
       width:400px;
     }
     ${Subtitulo}{
       font-size: 150%;
-      left:50%;
+      left:30%;
+      top:85%;
+      width:300px;
+        }
+    ${Arbol}{
+      top: 30%;
+        }
+     }
+     @media screen and (max-width: 475px)
+
+      {
+        background-image: url(${img0});
+        baackground-size: 50% 50%;
+        height: 30vh;
+     ${Titulo}{
+      font-size: 150%;
+      top:60%;
+      left:15%;
+         }
+    ${Subtitulo}{
+      font-size: 100%;
+      left:40%;
       top:80%;
       width:300px;
     }
     ${Arbol}{
-      top: 30%;
-      background-size: 80% 80%;
-    }
-     }
-     @media screen and (max-width: 475px) {
-     ${Titulo}{
-      font-size: 120%;
-      top: 40%;
-     
-    }
-    ${Subtitulo}{
-      font-size: 100%;
-      left:40%;
-      top:60%;
-      width:300px;
-    }
-    ${Arbol}{
-      top: 30%;
-      background-size: 80% 80%;
-    }
-  
+      top: 50%;
+      height: 60%;
+      width: 60%;
+      right:20%
 
-     }
+        }
+       }
   `;
 
-
+const Direccion = styled.p`
+  top:90%;
+`
 
 export default function Head() {
   const [loading, setLoading] = useState(true);
@@ -295,7 +303,7 @@ export default function Head() {
         </Bird>
         
         <Subtitulo> contenidos  </Subtitulo>
-       
+        <Direccion> contenidos  </Direccion>
       </Container>)
 }
     </>

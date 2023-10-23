@@ -10,6 +10,11 @@ const Contenedor= styled.div`
     background-color: #00aaa0;
     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 5s;
+  @media (max-width: 600px){
+
+flex-direction: column;
+left: 0%;
+  }
     
 `
 const Entrevistas = styled.div`
@@ -32,6 +37,8 @@ color: #d55b3e;
 transition: all 1ms linear; };
     @media (max-width:600px){
         font-size: 12px;
+        margin-left:2%;
+        width:90%
     }
 
 
@@ -58,6 +65,8 @@ transition: all .2ms ease-in-out; };
 
     @media (max-width:600px){
         font-size: 12px;
+        margin-left:2%;
+        width:90%
     }
 `
 const Resernias= styled.div`
@@ -81,6 +90,8 @@ color: #d55b3e;
 transition: all .2ms ease-in-out; };
     @media (max-width:600px){
         font-size: 12px;
+        margin-left:2%;
+        width:90%
     }   
 `
 const H2 = styled.h2`

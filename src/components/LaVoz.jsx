@@ -46,12 +46,7 @@ padding: 5%;
     }`
  const LaVoz = ()=>{
 
-    const [isPlaying, setIsPlaying] = useState(false);
 
-    const handlePlayPause = () => {
-      setIsPlaying(!isPlaying);
-
-    };
     useEffect(() => { Aos.init({ duration: 2000 }); },[]);
   
     return(
@@ -68,7 +63,7 @@ padding: 5%;
       </audio>
      
     </Reproductor>
-<H6>La Voz de les Poetas es una serie de encuentros de poesía nacidos en Aislamiento en abril de 2020 y organizado por Nido de Palabras; hoy, el espacio adquiere versatilidad de formatos (vivo, radio, podcast) y reune a escritores de distintas latitudes que declaman sus textos a viva voz.</H6>
+<H6>La Voz de les Poetas son encuentros de poesía nacidos en Aislamiento en abril de 2020 y organizado por Nido de Palabras; hoy, el espacio adquiere versatilidad de formatos (vivo, radio, podcast) y reune a escritores de distintas latitudes que declaman sus textos a viva voz.</H6>
 
 </Contenedor> </>  )
 }
