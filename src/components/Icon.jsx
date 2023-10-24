@@ -24,7 +24,6 @@ const Container = styled.div`
   
  `;
 
-
 const Icon = () => {
  
 

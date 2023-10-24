@@ -1,60 +1,11 @@
 import React, {useState, useEffect} from "react";
 import styled, { keyframes } from "styled-components";
 import img0 from "../assets/giggl3s4.gif";
-import arbol from "../assets/arbol.webp";
+import arbol from "../assets/arbolsombra.png";
 import Icon from "./Icon";
 //import Nav from "./Navbar";
 //Video by Taryn Elliott: https://www.pexels.com/video/a-video-footage-of-forest-trees-9682891/
 
-
-const rotateAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-const rotateBackAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-`;
-
-const Spinner = styled.div`
-  width: 48px;
-  height: 48px;
-  left : 50%;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  border: 3px solid;
-  border-color: #8ed2c9  rgb(0, 170, 160)  transparent;
-  box-sizing: border-box;
-  animation: ${rotateAnimation} 1s linear infinite;
-
-  &::after {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border: 3px solid;
-    border-color: transparent  #d55b3e #d55b3e;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    animation: ${rotateBackAnimation} 0.5s linear infinite;
-    transform-origin: center center;
-  }
-`;
 
 const fadeIn = keyframes`
   0% {
@@ -90,27 +41,36 @@ const flyAnimationMobile = keyframes`
 `;
 const flyAnimation = keyframes`
   0% {
-    transform: translate(-1000px, 0px) scale(0.3) scaleX(-1);
+    transform: translate(-150%, 0%) scale(0.3) scaleX(1);
     opacity: 1;
   }
-
-
-  76% {
-    transform: translate(10px, -20px) scale(3);
+  30% {
+    transform: translate(-20%, -0%) scale(2);
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 100%;
+  }
+  50% {
+    transform: translate(0%, 0%) rotate(-20deg ) scale(0.5);
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 100%;
+  }
+  60% {
+    transform: translate(50%, -20%) scale(1) scaleX(-0.5);
     opacity: 1;
     background-color: rgba(255, 0, 0, 0);
     border-radius: 100%;
   }
 
   85% {
-    transform: translate(100px, -80px) scale(3);
+    transform: translate(47%, -20%) scale(1) scaleX(-1);
     opacity: 1;
     background-color: rgba(255, 0, 0, 0);
     border-radius: 100%;
   }
-
   100% {
-    transform: translate(2000px, -808px) scale(4);
+    transform: translate(50%, -100%) scale(1);
     opacity: 1;
   }
 `;
@@ -121,11 +81,13 @@ const Bird = styled.div`
   background-size: 30%;
   background-repeat: no-repeat;
   bottom: 10%;
-  animation: ${flyAnimation} 15s infinite;
+  animation: ${flyAnimation} 25s infinite;
   z-index: 2;
-  @media (max-width:800px){ 
+  @media (max-width:600px){ 
     animation:${flyAnimationMobile} 15s infinite;
-  }
+    background-size: 1%;
+    z-index:20000;
+  } 
   
 
 `;
@@ -281,25 +243,14 @@ const Direccion = styled.p`
 `
 
 export default function Head() {
-  const [loading, setLoading] = useState(true);
+ 
 
-  useEffect(() => {
-    // Simula una carga de datos 
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
-    // Limpia el timeout en el desmontaje del componente
-    return () => clearTimeout(timeout);
-  }, []);
 
   
 
  
   return (
-    <> {loading ? (
-      <Spinner />
-    ) : (
+    <> 
       <Container>
      <Titulo>Nido de Palabras</Titulo>
       <Arbol />
@@ -309,8 +260,8 @@ export default function Head() {
         
         <Subtitulo> contenidos  </Subtitulo>
         <Direccion> contenidos  </Direccion>
-      </Container>)
-}
+      </Container>
+
     </>
   );
 }
