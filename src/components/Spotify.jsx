@@ -38,7 +38,7 @@ display: flex;
 flex-direction: column;
   justify-content: center;
   align-items: center;
- background-color: #d55b3e;
+ background-color: #030000;
 width: 100%;
 padding: 0% 0% 20% 0%;
 `

@@ -146,18 +146,19 @@ left: 0%;
 
   
 `;
-const Subtitulo = styled.div`
+const Subtitulo = styled.p`
  position: absolute;
   top: 60%;
-   width: 40%;
-  color: #00aaa0;
-  opacity: 0.9;
-  box-shadow: inset black;
+   width: 100%;
+  color: #d55b3e;
+  -webkit-text-stroke: 0.7px #f8f9f8; 
+    opacity: 1;
   font-family: Open Sans, sans-serif;
-  font-size: 0px;
+  font-size: 30px;
   animation: ${fadeIn} 1.2s forwards;
   animation-delay: 3s;
   z-index: 1;
+  font-weight: 900px;
   left: 5px;
   opacity:0;
 
@@ -203,7 +204,7 @@ const Container = styled.div`
       width:500px;
     }
     ${Bird}{
-      background-size: 10%;
+      background-size: 100%;
     }
   ${Arbol}{
 width: 30%;
@@ -213,19 +214,23 @@ top: 30%
   }
      @media (max-width: 992px) {
        ${Titulo}{
-      font-size: 60px;
+      font-size: 50px;
       left:2%;
-      top:40%;
+      top:50%;
       width:100%;
     }
     ${Subtitulo}{
-      font-size: 20px;
-      left:2%;
-      top:80%;
+      font-size: 30px;
+      left:30%;
+      top:70%;
       width:300px;
     }
     ${Arbol}{
-      top: 30%;
+      top: 25%;
+      background-size: 100% 80%;
+      height: 450px;
+      width: 320px;
+      right: 5%
     }}
     @media (max-width: 768px) {
      ${Titulo}{

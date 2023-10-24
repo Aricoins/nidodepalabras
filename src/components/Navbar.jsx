@@ -6,7 +6,6 @@ const Navigator= styled.div`
  position: fixed;
        z-index: 1000;
     bottom: 1%;
-   background-color: #d55b3e;
    width:100%;
    left: 0%;
    height: 11%;
@@ -18,7 +17,7 @@ justify-content: center;
 align-items: center;
 align-content: center;
  @media screen and (max-width : 700px) {
-
+top: 100%;
   width: 90%;
 }
 `
