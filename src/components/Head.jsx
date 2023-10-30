@@ -81,7 +81,7 @@ const Bird = styled.div`
   background-size: 30%;
   background-repeat: no-repeat;
   bottom: 10%;
-  animation: ${flyAnimation} 25s infinite;
+  animation: ${flyAnimation} 60 infinite;
   z-index: 2;
   @media (max-width:600px){ 
     animation:${flyAnimationMobile} 15s infinite;

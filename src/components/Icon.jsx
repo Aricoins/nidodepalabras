@@ -8,19 +8,19 @@ const volar = keyframes`
     transform: scale(0.4);
   }
   100% {
-    background-position: -2700px;
+    background-position: -8250px;
     transform: scale(0.4);
   }
 `;
 
 const Container = styled.div`
-  width: 300px;
-  height: 290px;
+  width: 520px;
+  height: 820px;
   background-image: url(${imagen});
   background-size: cover;
   margin-right: 0;
   margin: 0 auto;
-  animation: ${volar} .6s steps(9) infinite;
+  animation: ${volar} 1s steps(16) infinite;
   
  `;
 
